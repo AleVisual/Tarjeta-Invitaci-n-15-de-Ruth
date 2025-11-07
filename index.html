@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felices 15 Años Ruth</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="essets/Imagen2.ico" type="image/x-icon">
+
+    <!-- Enlaces y metas para PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1a1a"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="15 de Ruth">
+    <link rel="apple-touch-icon" href="Imagenes/icons/icon-192x192.png">
+</head>
+<body>
+    <!-- Pantalla de bloqueo para dispositivos de escritorio -->
+    <div id="desktop-blocker">
+        <div class="blocker-content">
+            <h1>Por favor, abre esta invitación en tu celular</h1>
+            <p>Esta experiencia mágica está diseñada para ser vista en un dispositivo móvil.</p>
+        </div>
+    </div>
+
+    <div id="page1" class="parchment" style="background-image: url('Imagenes/Imagen1.jpg');">
+        <h1 class="main-title">Bienvenidos a Hogwarts</h1>
+        <div class="envelope-container" id="envelopeContainer">
+            <div class="envelope">
+                <div class="envelope-back"></div>
+                <div class="envelope-flap"></div>
+                <div class="wax-seal">
+                    <div class="gryffindor-emblem"></div>
+                </div>
+            </div>
+            <div class="letter" id="letter">
+                <div class="hogwarts-header">
+                    <div class="hogwarts-logo"></div>
+                    <div class="hogwarts-title">Colegio Hogwarts</div>
+                    <div class="school-motto">de Magia y Hechicería</div>
+                </div>
+                <div class="letter-content">
+                    <p><span class="recipient">Estimados Invitados,</span></p>
+                    <p>Nos complace informarles que han sido aceptados en el Colegio Hogwarts de Magia y Hechicería para celebrar un evento extraordinario: <strong>los 15 años de Ruth</strong>.</p>
+                    <a href="#" id="next-button" class="next-button">Siguiente</a>
+                </div>
+            </div>
+        </div>
+        <div id="countdown-timer">
+            <div class="countdown-item"><span id="days">0</span><div class="countdown-label">Días</div></div>
+            <div class="countdown-item"><span id="hours">0</span><div class="countdown-label">Horas</div></div>
+            <div class="countdown-item"><span id="minutes">0</span><div class="countdown-label">Minutos</div></div>
+            <div class="countdown-item"><span id="seconds">0</span><div class="countdown-label">Segundos</div></div>
+        </div>
+    </div>
+
+    <div id="page2" class="parchment" style="background-image: url('Imagenes/Imagen4.jpg'); display: none;">
+        <div class="details-content">
+            <p id="detail-line-1">La ceremonia mágica se llevará a cabo el <strong>22 de Marzo</strong> a las <strong>12:00</strong> horas, en la Quinta <strong>"La Pochita", Independencia 4242 (entre Merlo y Rufino Fal)</strong>.</p>
+            <p id="detail-line-2">Esperamos contar con su presencia. ¡Confirmar! Cel: 2284561230</p>
+            <div class="tooltip-container">
+                <img src="Imagenes/Imagen6.jpg" alt="Confirmar Asistencia" id="final-button" class="final-button">
+                <span class="tooltip-text">haz clic en la Snich</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="page3" class="parchment" style="background-image: url('Imagenes/Imagen5.jpg'); display: none;">
+        <img src="Imagenes/ImagenGif.gif" alt="Confirmación" id="confirmation-gif" class="confirmation-gif">
+    </div>
+
+    <div id="page4" class="parchment" style="background-image: url('Imagenes/Imagen7.jpg'); display: none; background-size: contain; background-repeat: no-repeat; background-color: #c8b89a;">
+        <!-- Imágenes que volarán por la pantalla -->
+        <img src="Imagenes/volando1.png" alt="Imagen voladora 1" id="flying-image-1" class="flying-image">
+        <img src="Imagenes/volando2.png" alt="Imagen voladora 2" id="flying-image-2" class="flying-image">
+    </div>
+
+    <div id="page5" class="parchment" style="background-image: url('Imagenes/Imagen9.jpg'); display: none;">
+        <div class="page5-content">
+            <p>Vestimenta: ¡Lo que quieras! Colores sugeridos: <span class="color-red">Rojo</span>, <span class="color-yellow">Amarillo</span>, <span class="color-blue">Azul</span> y <span class="color-green">verde</span>, o algún accesorio de esos colores. ¡No olvides de traer malla!, Pileta climatizada</p>
+        </div>
+    </div>
+
+    <div id="page6" class="parchment" style="background-image: url('Imagenes/Imagen10.jpg'); display: none;">
+        <div class="page6-content">
+            <p class="gift-info">El mejor regalo es tu presencia, pero si querés hacerme un regalito te dejo mi Alias... <span class="alias">donas.wafles.petit</span></p>
+        </div>
+    </div>
+
+    <div id="page7" class="parchment" style="background-image: url('Imagenes/Imagen8.jpg'); display: none;">
+        <p class="final-quote">“Cualquier cosa es posible si tienes suficiente valor”.</p>
+        <h2 class="birthday-wish">¡Felices 15 Años, Ruth!</h2>
+    </div>
+
+    <audio id="bg-music" src="Sonido/vin-harry-potter.mp3" loop></audio>
+    <audio id="transition-sound" src="Sonido/the-mischievous-wizard-311524.mp3"></audio>
+    <audio id="i-swear-sound" src="Sonido/Juro solemnemente qu.mp3"></audio>
+    <audio id="page4-music" src="Sonido/Harry-Potter-4.mp3"></audio>
+    <audio id="final-music" src="Sonido/Nick Cave & The Bad Seeds - O Children.mp3"></audio>
+    <audio id="page5-sound" src="Sonido/Coro Hogwarts en español - ESCOLANIA DEL RECUERDO.mp3"></audio> 
+    <audio id="page6-sound" src="Sonido/creepy-halloween-bells-loop-408748.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
