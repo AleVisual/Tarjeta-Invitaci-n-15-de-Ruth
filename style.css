@@ -24,7 +24,7 @@ body {
     font-family: 'Harry_P', serif;
     font-size: 5em;
     color: #e0c58e;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
 }
 
@@ -34,16 +34,17 @@ body {
     height: 650px;
     background-size: cover;
     background-position: center;
-    box-shadow: 
-        0 0 50px rgba(0,0,0,0.8),
-        inset 0 0 100px rgba(0,0,0,0.2);
+    box-shadow:
+        0 0 50px rgba(0, 0, 0, 0.8),
+        inset 0 0 100px rgba(0, 0, 0, 0.2);
     position: relative;
     border: 3px solid #8b7753;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: opacity 1.5s ease-out; /* Transición de desvanecimiento */
+    transition: opacity 1.5s ease-out;
+    /* Transición de desvanecimiento */
 }
 
 .envelope-container {
@@ -53,7 +54,7 @@ body {
     aspect-ratio: 420 / 320;
     cursor: pointer;
     transition: transform 0.3s ease;
-    filter: drop-shadow(0 15px 35px rgba(0,0,0,0.6));
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6));
 }
 
 .envelope-container:hover {
@@ -73,7 +74,7 @@ body {
     border: 3px solid #5c0000;
     position: absolute;
     bottom: 0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .envelope-flap {
@@ -87,7 +88,7 @@ body {
     transform-origin: top center;
     transition: transform 0.8s ease;
     clip-path: polygon(0 0, 50% 100%, 100% 0);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .envelope-container.open .envelope-flap {
@@ -112,17 +113,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 
-        0 5px 15px rgba(0,0,0,0.5),
-        inset 0 -3px 10px rgba(0,0,0,0.3);
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.5),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     z-index: 10;
 }
 
 .envelope-container:hover .wax-seal {
-    box-shadow: 
-        0 8px 20px rgba(139,0,0,0.6),
-        inset 0 -3px 10px rgba(0,0,0,0.3);
+    box-shadow:
+        0 8px 20px rgba(139, 0, 0, 0.6),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.3);
 }
 
 .gryffindor-emblem {
@@ -139,7 +140,7 @@ body {
     position: absolute;
     width: 90%;
     height: 88%;
-    background: linear-gradient(to bottom, rgba(249,245,235,0.98) 0%, rgba(244,232,208,0.98) 100%);
+    background: linear-gradient(to bottom, rgba(249, 245, 235, 0.98) 0%, rgba(244, 232, 208, 0.98) 100%);
     top: 50%;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -148,7 +149,7 @@ body {
     border: 2px solid #8b7753;
     z-index: 5;
     padding: 40px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
 }
 
@@ -240,8 +241,10 @@ body {
 }
 
 .details-content {
-    color: #371331; /* Color negro */
-    font-weight: bold; /* Texto en negrita */
+    color: #371331;
+    /* Color negro */
+    font-weight: bold;
+    /* Texto en negrita */
     font-size: 33px;
     font-family: 'Garamond', 'Times New Roman', serif;
     line-height: 1.8;
@@ -250,16 +253,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-shadow: 1px 1px 0 #f2efef, 2px 2px 0 #ffffff, 3px 3px 8px rgba(255,255,255,0.5); /* Efecto de relieve invertido */
-    justify-content: center; /* Centra el contenido (párrafos y botón) dentro del bloque */
-    min-height: 300px; /* Le damos una altura mínima para que no cambie de tamaño */
-    margin-top: 150px; /* Mueve el texto hacia abajo */
+    text-shadow: 1px 1px 0 #f2efef, 2px 2px 0 #ffffff, 3px 3px 8px rgba(255, 255, 255, 0.5);
+    /* Efecto de relieve invertido */
+    justify-content: center;
+    /* Centra el contenido (párrafos y botón) dentro del bloque */
+    min-height: 300px;
+    /* Le damos una altura mínima para que no cambie de tamaño */
+    margin-top: 150px;
+    /* Mueve el texto hacia abajo */
 }
 
 .details-content p {
-    visibility: hidden; /* Ocultar párrafos pero manteniendo su espacio */
-    opacity: 0; /* Aseguramos que sea invisible */
-    transition: opacity 1.5s ease-out; /* Transición para desvanecer */
+    visibility: hidden;
+    /* Ocultar párrafos pero manteniendo su espacio */
+    opacity: 0;
+    /* Aseguramos que sea invisible */
+    transition: opacity 1.5s ease-out;
+    /* Transición para desvanecer */
 }
 
 .typing-cursor::after {
@@ -269,7 +279,9 @@ body {
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 .details-content p {
@@ -278,7 +290,8 @@ body {
 
 .tooltip-container {
     position: relative;
-    display: none; /* Oculto por defecto */
+    display: none;
+    /* Oculto por defecto */
     opacity: 0;
     transition: opacity 1.5s ease-in;
 }
@@ -286,26 +299,31 @@ body {
 .final-button {
     width: 250px;
     cursor: pointer;
-    margin-top: 0; /* Eliminamos el margen superior para un centrado perfecto */
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+    margin-top: 0;
+    /* Eliminamos el margen superior para un centrado perfecto */
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
     /* Animación de oscilación para llamar la atención */
     animation: gentleOscillate 3s ease-in-out infinite;
 }
 
 .tooltip-text {
     visibility: hidden;
-    opacity: 0;    
+    opacity: 0;
     width: 140px;
-    background-color: #fdf5e6; /* Color pergamino */
-    color: #3a2e2c; /* Texto marrón oscuro */
+    background-color: #fdf5e6;
+    /* Color pergamino */
+    color: #3a2e2c;
+    /* Texto marrón oscuro */
     text-align: center;
     border-radius: 10px;
     padding: 10px;
     position: absolute;
     z-index: 1;
-    bottom: 115%; /* Posición encima del botón */
+    bottom: 115%;
+    /* Posición encima del botón */
     left: 50%;
-    margin-left: -70px; /* Centrar el tooltip (mitad del ancho) */
+    margin-left: -70px;
+    /* Centrar el tooltip (mitad del ancho) */
     border: 2px solid #c8b89a;
     font-family: 'Garamond', serif;
     font-size: 16px;
@@ -332,6 +350,7 @@ body {
         opacity: 0;
         transform: scale(0.5);
     }
+
     to {
         visibility: visible;
         opacity: 1;
@@ -340,7 +359,8 @@ body {
 }
 
 .confirmation-gif {
-    display: none; /* Oculto por defecto */
+    display: none;
+    /* Oculto por defecto */
     opacity: 0;
     max-width: 80%;
     max-height: 80%;
@@ -376,10 +396,12 @@ body {
 
     .details-content {
         font-size: 22px;
-        margin-top: 100px; /* Ajusta el margen para tablet */
+        margin-top: 100px;
+        /* Ajusta el margen para tablet */
     }
 
-    .tooltip-container, .final-button {
+    .tooltip-container,
+    .final-button {
         width: 200px;
     }
 }
@@ -395,17 +417,21 @@ body {
 
     .details-content {
         font-size: 20px;
-        margin-top: 180px; /* Bajamos aún más el texto en móvil */
+        margin-top: 180px;
+        /* Bajamos aún más el texto en móvil */
     }
 
-    .tooltip-container, .final-button {
+    .tooltip-container,
+    .final-button {
         width: 180px;
     }
 
     #page4 {
         /* Hacemos que la página ocupe toda la altura y centramos el fondo */
         height: 100vh;
-        background-size: cover !important;
+        background-size: contain !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
     }
 
     #page5 {
@@ -416,7 +442,8 @@ body {
 
     .final-quote {
         font-size: 1.8em;
-        top: 5%; /* Aún más arriba en móvil */
+        top: 5%;
+        /* Aún más arriba en móvil */
         width: 90%;
     }
 
@@ -439,10 +466,13 @@ body {
 /* Estilos para las imágenes voladoras */
 .flying-image {
     position: absolute;
-    display: none; /* Ocultas por defecto */
-    width: 150px; /* Ajusta el tamaño si es necesario */
+    display: none;
+    /* Ocultas por defecto */
+    width: 150px;
+    /* Ajusta el tamaño si es necesario */
     height: auto;
-    pointer-events: none; /* Para que no interfieran con otros clics */
+    pointer-events: none;
+    /* Para que no interfieran con otros clics */
     z-index: 20;
 }
 
@@ -450,7 +480,8 @@ body {
 .fly-across-1 {
     display: block;
     top: 20%;
-    left: 25%; /* Más al centro */
+    left: 25%;
+    /* Más al centro */
     animation: flyAwayZoom1 5s linear forwards;
 }
 
@@ -459,6 +490,7 @@ body {
         opacity: 1;
         transform: scale(1) rotate(-15deg);
     }
+
     100% {
         opacity: 0;
         transform: scale(8) translate(-100px, -100px) rotate(-30deg);
@@ -469,7 +501,8 @@ body {
 .fly-across-2 {
     display: block;
     top: 50%;
-    right: 25%; /* Más al centro */
+    right: 25%;
+    /* Más al centro */
     animation: flyAwayZoom2 5s linear forwards;
 }
 
@@ -478,6 +511,7 @@ body {
         opacity: 1;
         transform: scale(1) rotate(15deg) scaleX(-1);
     }
+
     100% {
         opacity: 0;
         transform: scale(8) translate(100px, 100px) rotate(30deg) scaleX(-1);
@@ -487,7 +521,8 @@ body {
 /* Estilos para la frase final */
 .final-quote {
     position: absolute;
-    top: 10%; /* Aún más arriba */
+    top: 10%;
+    /* Aún más arriba */
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
@@ -497,14 +532,17 @@ body {
     color: #e0c58e;
     text-align: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-    opacity: 0; /* Oculto por defecto */
-    animation: fadeInQuote 4s ease-in 1.5s forwards; /* La animación empieza 1.5s después de que la página aparece */
+    opacity: 0;
+    /* Oculto por defecto */
+    animation: fadeInQuote 4s ease-in 1.5s forwards;
+    /* La animación empieza 1.5s después de que la página aparece */
 }
 
 @keyframes fadeInQuote {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -518,10 +556,11 @@ body {
     font-family: 'Harry_P', serif;
     font-size: 2.2em;
     color: #e0c58e;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    opacity: 0; /* Oculto por defecto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    /* Oculto por defecto */
     /* La primera animación lo hace aparecer, la segunda lo hace oscilar después */
-    animation: 
+    animation:
         fadeInWish 2s ease-in 5.5s forwards,
         gentleOscillate 4s ease-in-out infinite 7.5s;
 }
@@ -530,15 +569,19 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
 @keyframes gentleOscillate {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.03);
     }
@@ -554,12 +597,15 @@ body {
         transform: scale(1) rotate(0);
         opacity: 1;
     }
+
     30% {
         transform: scale(1.1) rotate(-5deg) translateX(-15px);
     }
+
     50% {
         transform: scale(1.2) rotate(5deg) translateX(15px);
     }
+
     100% {
         transform: scale(6);
         opacity: 0;
@@ -573,7 +619,7 @@ body {
     margin-top: 30px;
     text-align: center;
     color: #e0c58e;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .countdown-item {
@@ -598,47 +644,72 @@ body {
 
 /* Estilos para el contenido de la página 5 */
 .page5-content {
-    color: #FFFFFF; /* Cambiamos el color a blanco */
+    color: #FFFFFF;
+    /* Cambiamos el color a blanco */
     font-family: 'Garamond', 'Times New Roman', serif;
-    font-size: 23px; /* Hacemos el texto un poco más chico */
+    font-size: 23px;
+    /* Hacemos el texto un poco más chico */
     font-weight: bold;
     text-align: center;
     line-height: 1.7;
     max-width: 70%;
-    margin-top: 220px; /* Subimos un poco el bloque de texto */
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.9); /* Sombra más fuerte para legibilidad */
-    opacity: 0; /* Oculto por defecto para la animación */
+    margin-top: 220px;
+    /* Subimos un poco el bloque de texto */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+    /* Sombra más fuerte para legibilidad */
+    opacity: 0;
+    /* Oculto por defecto para la animación */
     /* La primera animación es para la entrada, la segunda es para la oscilación continua */
     animation: magicalZoomIn 3s ease-out 1s forwards, gentleOscillate 5s ease-in-out infinite 4s;
 }
 
 .page5-content p {
-    margin-bottom: 20px; /* Espacio entre párrafos por si añades más */
+    margin-bottom: 20px;
+    /* Espacio entre párrafos por si añades más */
 }
 
 .gift-info {
-    font-size: 20px; /* Hacemos este texto un poco más chico también */
+    font-size: 20px;
+    /* Hacemos este texto un poco más chico también */
     margin-top: 30px;
 }
 
 .alias {
     display: inline-block;
     margin-top: 10px;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0, 0, 0, 0.05);
     padding: 5px 10px;
     border-radius: 5px;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     font-family: monospace;
-    color: #3a2e2c; /* Mantenemos el alias oscuro para que contraste en su caja */
+    color: #9d3737;
+    /* Mantenemos el alias oscuro para que contraste en su caja */
     /* Animación de oscilación suave que empieza después de que aparece el texto */
     animation: gentleOscillate 4s ease-in-out infinite 3s;
 }
 
 /* Colores para las casas de Hogwarts */
-.color-red { color: #941B0C; } /* Gryffindor */
-.color-yellow { color: #FFC700; text-shadow: 0 0 2px #000; } /* Hufflepuff */
-.color-blue { color: #0D698B; } /* Ravenclaw */
-.color-green { color: #1A472A; } /* Slytherin */
+.color-red {
+    color: #941B0C;
+}
+
+/* Gryffindor */
+.color-yellow {
+    color: #FFC700;
+    text-shadow: 0 0 2px #000;
+}
+
+/* Hufflepuff */
+.color-blue {
+    color: #0D698B;
+}
+
+/* Ravenclaw */
+.color-green {
+    color: #1A472A;
+}
+
+/* Slytherin */
 
 /* Animación para el contenido de la página 5 */
 @keyframes magicalZoomIn {
@@ -646,10 +717,12 @@ body {
         opacity: 0;
         transform: translateY(20px) scale(0.95);
     }
+
     60% {
         transform: translateY(0) scale(1.02);
     }
-    to { 
+
+    to {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
@@ -664,9 +737,11 @@ body {
     text-align: center;
     line-height: 1.7;
     max-width: 70%;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
-    opacity: 0; /* Oculto por defecto para la animación */
-    animation: fadeInContent 2s ease-out 1s forwards; /* Reutilizamos la animación de entrada */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    /* Oculto por defecto para la animación */
+    animation: fadeInContent 2s ease-out 1s forwards;
+    /* Reutilizamos la animación de entrada */
 }
 
 /* Restauramos la animación original para que la página 6 la use */
@@ -675,6 +750,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -683,23 +759,28 @@ body {
 
 .page6-content .gift-info {
     font-size: 20px;
-    margin-top: 0; /* Reseteamos el margen superior */
+    margin-top: 0;
+    /* Reseteamos el margen superior */
 }
 
 /* --- Estilos para el bloqueo en Escritorio --- */
 #desktop-blocker {
-    display: none; /* Oculto por defecto */
+    display: none;
+    /* Oculto por defecto */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #1a1a1a; /* Mismo fondo oscuro que el body */
-    z-index: 9999; /* Para asegurar que esté por encima de todo */
+    background-color: #1a1a1a;
+    /* Mismo fondo oscuro que el body */
+    z-index: 9999;
+    /* Para asegurar que esté por encima de todo */
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #e0c58e; /* Color de texto tipo pergamino */
+    color: #e0c58e;
+    /* Color de texto tipo pergamino */
 }
 
 .blocker-content {
