@@ -15,8 +15,6 @@ const urlsToCache = [
 
     // Iconos
     './essets/Imagen2.ico',
-    './Imagenes/icons/icon-192x192.png',
-    './Imagenes/icons/icon-512x512.png',
 
     // Imágenes y GIFs
     './Imagenes/Imagen1.jpg',
