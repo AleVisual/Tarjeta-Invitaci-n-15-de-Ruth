@@ -429,7 +429,7 @@ body {
     #page4 {
         /* Hacemos que la página ocupe toda la altura y centramos el fondo */
         height: 100vh;
-        background-size: contain !important;
+        background-size: 100% 100% !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
     }
@@ -792,4 +792,35 @@ body {
     font-family: 'Harry_P', serif;
     font-size: 3.5em;
     margin-bottom: 20px;
+}
+
+/* --- Estilos para Mensaje de Finalización --- */
+#expiration-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    z-index: 10000;
+    /* Por encima de todo, incluso del desktop blocker si fuera necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #e0c58e;
+}
+
+.expiration-content h1 {
+    font-family: 'Harry_P', serif;
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.expiration-content p {
+    font-family: 'Harry_P', serif;
+    font-size: 2.5em;
+    color: #8b0000;
+    /* Un tono rojo oscuro para la fecha */
 }
