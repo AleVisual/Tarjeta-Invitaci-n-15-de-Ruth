@@ -22,7 +22,7 @@ const page5Sound = document.getElementById('page5-sound');
 const flyingImage1 = document.getElementById('flying-image-1');
 const flyingImage2 = document.getElementById('flying-image-2');
 
-envelopeContainer.addEventListener('click', function() {
+envelopeContainer.addEventListener('click', function () {
     // No reproducir sonido si el clic fue en la carta misma
     if (event.target.closest('#letter')) {
         return;
@@ -38,12 +38,12 @@ envelopeContainer.addEventListener('click', function() {
     }
 });
 
-letter.addEventListener('click', function() {
+letter.addEventListener('click', function () {
     bgMusic.pause();
     bgMusic.currentTime = 0; // Reinicia la música
 });
 
-nextButton.addEventListener('click', function(event) {
+nextButton.addEventListener('click', function (event) {
     event.preventDefault(); // Evita que el enlace recargue la página
 
     transitionSound.play(); // Reproduce el nuevo sonido
@@ -118,7 +118,7 @@ function startTypingAnimation() {
     });
 }
 
-finalButton.addEventListener('click', function() {
+finalButton.addEventListener('click', function () {
     // Oculta la nubesita (tooltip) inmediatamente al hacer clic
     document.querySelector('.tooltip-text').style.display = 'none';
 
@@ -127,7 +127,7 @@ finalButton.addEventListener('click', function() {
     bgMusic.currentTime = 0;
     transitionSound.pause();
     transitionSound.currentTime = 0;
-    
+
     page2.style.opacity = '0';
     finalButton.classList.add('fly-away');
 
@@ -148,7 +148,7 @@ finalButton.addEventListener('click', function() {
                     iSwearSound.play();
 
                     // 2. Cuando el primer sonido termine, reproduce el segundo y haz la transición
-                    iSwearSound.onended = function() {
+                    iSwearSound.onended = function () {
                         page4Music.play(); // Empieza la música de la página 4
                         page3.style.opacity = '0';
                         setTimeout(() => {
@@ -224,7 +224,7 @@ finalButton.addEventListener('click', function() {
 });
 
 // Cuando la música final termina, vuelve al principio recargando la página.
-finalMusic.addEventListener('ended', function() {
+finalMusic.addEventListener('ended', function () {
     // 1. Desvanece la última página
     page7.style.opacity = '0';
 
@@ -238,7 +238,7 @@ finalMusic.addEventListener('ended', function() {
 function startCountdown() {
     const countdownDate = new Date("Mar 22, 2026 12:30:00").getTime();
 
-    const interval = setInterval(function() {
+    const interval = setInterval(function () {
         const now = new Date().getTime();
         const distance = countdownDate - now;
 
@@ -270,6 +270,19 @@ function checkDevice() {
     }
 }
 
+// Lógica para verificar la expiración del servicio
+function checkExpiration() {
+    const now = new Date();
+    const expirationDate = new Date("Mar 23, 2026 00:00:00");
+    const expirationMessage = document.getElementById('expiration-message');
+
+    if (now >= expirationDate) {
+        expirationMessage.style.display = 'flex';
+        // Opcional: Detener música o interacciones si es necesario
+        // document.body.style.overflow = 'hidden'; 
+    }
+}
+
 // Inicia el contador cuando la página se carga
 document.addEventListener('DOMContentLoaded', () => {
     checkDevice(); // Comprobamos el tipo de dispositivo al cargar
@@ -277,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Opcional: Volver a comprobar si el usuario cambia el tamaño de la ventana
     window.addEventListener('resize', checkDevice);
 
+    checkExpiration(); // Comprobamos si el servicio ha expirado
     startCountdown();
 
     // Lógica para registrar el Service Worker para la PWA
